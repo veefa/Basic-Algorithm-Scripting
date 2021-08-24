@@ -4,7 +4,7 @@ Return the lowest index at which a value (second argument) i.e **num** should be
 The returned value should be a number.
 */
 //
-//// Solution
+//// Solution 1
 //
 function getIndexToIns(arr, num) {
   arr.sort((a, b) => {
@@ -18,5 +18,13 @@ function getIndexToIns(arr, num) {
   return arr.length;
 }
 
+console.log(getIndexToIns([5, 3, 20, 3], 5));
+//return 2
+//
+//// Solution 2
+//
+function getIndexToIns(arr, num) {
+  return arr.filter(val => num > val).length;
+}
 console.log(getIndexToIns([5, 3, 20, 3], 5));
 //return 2
